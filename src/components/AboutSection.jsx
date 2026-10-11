@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { heroImage } from '../assets'
 import '../styles/about-section.css'
 
 export default function AboutSection() {
@@ -11,7 +12,7 @@ export default function AboutSection() {
             <div className="about-image-wrapper">
               <div className="about-image">
                 <img
-                  src="/hero.png"
+                  src={heroImage}
                   alt="Buna Burji Hotel interior and hospitality atmosphere"
                   className="about-image-photo"
                 />

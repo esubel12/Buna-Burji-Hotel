@@ -1,4 +1,5 @@
 import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import { heroImage } from '../assets'
 
 export const DEFAULT_ROOMS = [
   {
@@ -11,7 +12,7 @@ export const DEFAULT_ROOMS = [
     description:
       'A warm and welcoming room designed for travelers seeking a calm, comfortable stay in Amaro Kelle. Enjoy thoughtful touches and a peaceful atmosphere.',
     features: ['Private bathroom', 'Complimentary WiFi', 'Comfort bedding', 'Relaxed seating area'],
-    image_url: '/hero.png',
+    image_url: heroImage,
     imageAlt: 'Buna Burji Hotel room interior with warm lighting',
   },
   {
@@ -24,7 +25,7 @@ export const DEFAULT_ROOMS = [
     description:
       'A spacious setting for guests who value extra room to unwind. Elegant finishes, soothing tones, and a restful environment create a refined stay.',
     features: ['Elegant décor', 'High-speed WiFi', 'Modern bathroom', 'Quiet workspace'],
-    image_url: '/hero.png',
+    image_url: heroImage,
     imageAlt: 'Buna Burji Hotel guest room with elegant décor',
   },
   {
@@ -37,7 +38,7 @@ export const DEFAULT_ROOMS = [
     description:
       'Comfortable accommodation for friends or family members traveling together, offering flexible sleeping arrangements and a welcoming interior.',
     features: ['Flexible layout', 'Complimentary WiFi', 'Inviting atmosphere', 'Modern amenities'],
-    image_url: '/hero.png',
+    image_url: heroImage,
     imageAlt: 'Buna Burji Hotel welcoming guest room interior',
   },
 ]

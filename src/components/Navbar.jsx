@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { hotelLogo } from '../assets'
 import '../styles/navbar.css'
 
 export default function Navbar() {
@@ -8,7 +9,7 @@ export default function Navbar() {
         {/* Logo/Brand */}
         <Link className="navbar-brand" to="/">
           <div className="brand-logo">
-            <img src="/logo.jpg" alt="Buna Burji Hotel logo" />
+            <img src={hotelLogo} alt="Buna Burji Hotel logo" />
           </div>
           <div className="brand-copy">
             <div className="brand-text">

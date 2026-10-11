@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { hotelLogo } from '../assets'
 import '../styles/hero.css'
 
 export default function Hero() {
@@ -11,7 +12,7 @@ export default function Hero() {
       <div className="hero-content container">
         <div className="row align-items-center h-100">
           <div className="col-lg-8 col-md-10 mx-auto text-center hero-text-wrapper">
-            <img src="/logo.jpg" alt="Buna Burji Hotel logo" className="hero-logo" />
+            <img src={hotelLogo} alt="Buna Burji Hotel logo" className="hero-logo" />
             <p className="hero-location">Amaro Kelle</p>
             <h2 className="hero-subtitle">
               Experience Comfort and Hospitality

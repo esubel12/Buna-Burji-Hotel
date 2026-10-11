@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { hotelLogo } from '../assets'
 import '../styles/footer.css'
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
       <div className="container-fluid footer-content">
         <div className="footer-brand-card">
           <div className="footer-logo-wrap">
-            <img src="/logo.jpg" alt="Buna Burji Hotel logo" />
+            <img src={hotelLogo} alt="Buna Burji Hotel logo" />
           </div>
           <div className="footer-brand-copy">
             <h3>Buna Burji Hotel</h3>

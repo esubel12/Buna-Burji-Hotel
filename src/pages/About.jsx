@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { heroImage } from '../assets'
 import '../styles/about.css'
 
 /**
@@ -28,7 +29,7 @@ export default function About() {
             </div>
             <div className="col-lg-6">
               <div className="about-hero-image">
-                <img src="/hero.png" alt="Buna Burji Hotel lobby and hospitality atmosphere" />
+                <img src={heroImage} alt="Buna Burji Hotel lobby and hospitality atmosphere" />
               </div>
             </div>
           </div>

@@ -55,6 +55,19 @@ npm run build
 
 ---
 
+## Deployment Notes (GitHub Pages)
+
+When deploying to GitHub Pages or any subpath hosting:
+1. **Never use absolute path strings for images** like `/image.png` or `/logo.jpg`. On GitHub Pages, a leading slash points to `https://<username>.github.io/image.png` instead of `https://<username>.github.io/<repo>/image.png`, which will result in broken 404 images.
+2. **Always import images or use `import.meta.env.BASE_URL`**:
+   - For assets in `src/assets/`: Import them directly (e.g. `import { hotelLogo, heroImage } from '../assets'`) and use `src={hotelLogo}`.
+   - For public assets or dynamic paths: Use `${import.meta.env.BASE_URL}image.png` or the centralized `getAssetUrl(path)` helper in `src/assets/index.js`.
+   - In CSS: Use relative paths like `url('../assets/hero.png')` instead of root-absolute `url('/hero.png')`.
+3. **Exact file name capitalization**: Linux hosting (including GitHub Pages) is strictly case-sensitive (e.g. `logo.jpg` vs `Logo.JPG`). Always use lowercase, space-free filenames for all assets.
+4. **Base path**: Ensure `vite.config.js` sets `base: '/Buna-Burji-Hotel/'` matching the repository name exactly.
+
+---
+
 ## Database Setup (Supabase)
 
 To set up the database tables in your Supabase project:

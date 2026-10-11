@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getRooms, DEFAULT_ROOMS } from '../services/roomService'
+import { getAssetUrl } from '../assets'
 import '../styles/rooms-section.css'
 
 export default function RoomsSection() {
@@ -41,7 +42,7 @@ export default function RoomsSection() {
               {/* Room Image */}
               <div className="room-image-wrapper">
                 <img
-                  src={room.image_url || '/hero.png'}
+                  src={getAssetUrl(room.image_url)}
                   alt={`Buna Burji Hotel ${room.name}`}
                   className="room-image-photo"
                 />
