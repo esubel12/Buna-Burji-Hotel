@@ -1,0 +1,328 @@
+/* ========================================
+   SERVICES SECTION STYLING
+   Buna Burji Hotel
+   ======================================== */
+
+.services-section {
+  background: var(--secondary-cream);
+  padding: 4.5rem 0 1rem;
+  margin: 0;
+}
+
+/* Section Introduction */
+.services-intro {
+  background: var(--secondary-white);
+  padding: 3.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.section-label {
+  color: var(--primary-gold);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.section-label i {
+  font-size: 1.1em;
+}
+
+.section-heading {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.15;
+}
+
+.section-description {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-muted);
+  max-width: 860px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: var(--spacing-3xl) 0;
+}
+
+.service-item {
+  background: var(--secondary-white);
+  border: none; /* cleaner card feel */
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
+  box-shadow: 0 10px 24px rgba(28,47,73,0.06);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  text-align: center; /* center content like the reference */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(44, 69, 99, 0.12);
+}
+
+/* Service Icon */
+.service-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(243, 156, 18, 0.12);
+}
+.service-icon i {
+  font-size: 1.6rem; /* large, filled icon */
+  color: var(--primary-gold);
+  line-height: 1;
+  display: block;
+}
+.service-item:hover .service-icon i {
+  transform: translateY(-2px);
+}
+
+/* Service Name */
+.service-name {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-navy);
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Service Description */
+.service-description {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Services CTA Section */
+.services-cta {
+  background: linear-gradient(135deg, rgba(44, 69, 99, 0.05) 0%, rgba(243, 156, 18, 0.05) 100%);
+  padding: 3rem 0;
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(44, 69, 99, 0.1);
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.cta-content h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-content p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+}
+
+/* CTA Button */
+.btn-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0.75rem 2rem;
+  background-color: var(--primary-gold);
+  color: var(--secondary-white);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  border: 2px solid var(--primary-gold);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-cta-primary:hover {
+  background-color: var(--primary-navy);
+  border-color: var(--primary-navy);
+  color: var(--secondary-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(44, 69, 99, 0.2);
+}
+
+.btn-cta-primary i {
+  font-size: 0.9em;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  .services-intro {
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .services-section {
+    padding: var(--spacing-2xl) 0;
+    margin: var(--spacing-lg) 0;
+  }
+
+  .section-heading {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem 0;
+  }
+
+  .services-intro {
+    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .services-section {
+    padding: var(--spacing-lg) 0;
+    margin: 0;
+  }
+
+  .section-label {
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+
+  .service-item {
+    padding: var(--spacing-md);
+  }
+
+  .service-icon {
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .service-icon i {
+    font-size: 56px;
+  }
+
+  .service-name {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .cta-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn-cta-primary {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .services-cta {
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-lg);
+  }
+}
+
+/* Small Mobile (< 576px) */
+@media (max-width: 575px) {
+  .section-label {
+    font-size: 0.75rem;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .services-grid {
+    gap: 1.5rem 0;
+  }
+
+  .service-item {
+    padding: var(--spacing-sm);
+  }
+
+  .service-icon {
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .service-icon i {
+    font-size: 56px; /* keep icons large on small screens */
+  }
+
+  .service-name {
+    font-size: 1rem;
+  }
+
+  .cta-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .btn-cta-primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .services-section {
+    page-break-inside: avoid;
+  }
+
+  .btn-cta-primary {
+    border: 1px solid var(--primary-navy);
+    color: var(--primary-navy);
+  }
+}

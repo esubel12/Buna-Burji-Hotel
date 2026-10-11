@@ -1,0 +1,218 @@
+/* ========================================
+   CONTACT & LOCATION SECTION
+   Buna Burji Hotel
+   ======================================== */
+
+.contact-section {
+  background: var(--secondary-cream);
+  padding: 4.5rem 0 3rem;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) minmax(420px, 1fr);
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: var(--secondary-white);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 18px 44px rgba(28,47,73,0.07);
+}
+
+.section-label {
+  color: var(--primary-gold);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.section-label i {
+  font-size: 1.1em;
+}
+
+.contact-info-card h2 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-intro {
+  color: var(--text-muted);
+  max-width: 680px;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.contact-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.2rem 1.25rem;
+  border-radius: var(--radius-lg);
+  background: rgba(44, 69, 99, 0.04);
+}
+
+.contact-detail-item i {
+  font-size: 1.5rem; /* increase slightly for stronger visual weight */
+  color: var(--primary-gold);
+  margin-top: 0.15rem;
+}
+
+.detail-title {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-navy);
+  margin-bottom: 0.35rem;
+}
+
+.detail-title + p,
+.contact-detail-item p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.form-header h3 {
+  font-size: clamp(1.75rem, 4vw, 2.2rem);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-header p {
+  margin: 0 0 var(--spacing-3xl);
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-row label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-navy);
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(44, 69, 99, 0.15);
+  background: var(--secondary-cream);
+  color: var(--text-dark);
+  font-size: 0.98rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 4px rgba(243, 156, 18, 0.12);
+}
+
+.submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 28px rgba(243, 156, 18, 0.2);
+}
+
+.form-message {
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.form-error {
+  background: rgba(231, 76, 60, 0.1);
+  color: #c0392b;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+.form-success {
+  background: rgba(46, 204, 113, 0.12);
+  color: #1d8348;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.map-placeholder {
+  margin-top: var(--spacing-3xl);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(44, 69, 99, 0.05), rgba(243, 156, 18, 0.08));
+  border: 1px solid rgba(44, 69, 99, 0.08);
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.3rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-navy);
+}
+
+.map-label i {
+  font-size: 1.25rem;
+  color: var(--primary-gold);
+}
+
+@media (max-width: 991px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card,
+  .contact-info-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .contact-details-grid {
+    gap: 1rem;
+  }
+
+  .map-placeholder {
+    min-height: 160px;
+  }
+}

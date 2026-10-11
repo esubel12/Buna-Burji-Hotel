@@ -1,0 +1,145 @@
+/* ============================================
+   BUNA BURJI HOTEL - FOOTER
+   ============================================ */
+
+.hotel-footer {
+  background: var(--primary-navy);
+  color: var(--secondary-white);
+  padding: var(--spacing-3xl) 0 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.5fr) minmax(180px, 1fr) minmax(240px, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 0 var(--spacing-xl) var(--spacing-2xl);
+}
+
+.footer-brand-card,
+.footer-links-card,
+.footer-contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo-wrap {
+  width: 72px;
+  min-width: 72px;
+}
+
+.footer-logo-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.footer-brand-copy h3 {
+  margin: 0;
+  font-size: 1.55rem;
+  color: var(--secondary-white);
+}
+
+.footer-location {
+  margin: 0;
+  color: var(--accent-gold-light);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+.footer-section-label {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: var(--font-size-sm);
+  color: var(--primary-gold);
+  font-weight: var(--font-weight-semibold);
+}
+
+.footer-nav {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.98rem;
+  transition: color var(--transition-base);
+}
+
+.footer-nav a:hover {
+  color: var(--primary-gold);
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.footer-contact-item i {
+  font-size: 1.25rem;
+  color: var(--primary-gold);
+  margin-top: 0.15rem;
+}
+
+.footer-contact-item p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 991px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 0 var(--spacing-lg) var(--spacing-xl);
+  }
+}
+
+@media (max-width: 576px) {
+  .hotel-footer {
+    padding-bottom: 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 var(--spacing-md) var(--spacing-lg);
+  }
+
+  .footer-brand-card,
+  .footer-links-card,
+  .footer-contact-card {
+    gap: 0.75rem;
+  }
+
+  .footer-description {
+    max-width: 100%;
+  }
+
+  .footer-bottom-bar {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+}

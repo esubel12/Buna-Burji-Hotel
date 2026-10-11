@@ -1,0 +1,225 @@
+/* ============================================
+   BUNA BURJI HOTEL - ABOUT PAGE
+   ============================================ */
+
+.about-page {
+  color: var(--text-dark);
+}
+
+.about-hero {
+  padding: var(--spacing-5xl, 5rem) 0;
+  background: linear-gradient(180deg, rgba(245, 243, 240, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.about-hero-content {
+  max-width: 640px;
+}
+
+.about-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--primary-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-hero-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-hero-subtitle {
+  max-width: 620px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.about-hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-hero-image {
+  width: 100%;
+  max-width: 580px;
+  margin-top: 1.5rem;
+}
+
+.about-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  object-fit: cover;
+}
+
+.about-intro {
+  padding: var(--spacing-4xl) 0;
+}
+
+.about-intro h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-intro p {
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+.about-values {
+  padding: var(--spacing-4xl) 0;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-hero .row,
+.about-intro .row,
+.about-values .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-value-column {
+  display: flex;
+}
+
+.about-value-card {
+  background: var(--secondary-white);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: rgba(243, 156, 18, 0.12);
+  color: var(--primary-gold);
+  font-size: 1.35rem;
+}
+
+.about-value-title {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-navy);
+  margin: 0;
+}
+
+.about-value-text {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.about-cta {
+  padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+}
+
+.about-cta-card {
+  background: var(--secondary-white);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-cta-copy {
+  max-width: 72%;
+}
+
+.about-cta-copy h3 {
+  margin: 0 0 var(--spacing-sm);
+  color: var(--primary-navy);
+  font-size: 1.75rem;
+}
+
+.about-cta-copy p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.about-cta-action {
+  margin-top: 0;
+}
+
+@media (max-width: 991px) {
+  .about-hero,
+  .about-intro,
+  .about-values,
+  .about-cta {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .about-hero-image {
+    margin-top: 0;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-cta-copy {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-hero-image img {
+    border-radius: var(--radius-lg);
+  }
+
+  .about-cta-card {
+    padding: var(--spacing-xl);
+  }
+}

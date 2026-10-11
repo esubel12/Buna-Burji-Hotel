@@ -1,0 +1,431 @@
+/* ============================================
+   ROOMS SECTION STYLES - BUNA BURJI HOTEL
+   ============================================ */
+
+.rooms-section {
+  padding: 0;
+  background-color: var(--secondary-cream);
+}
+.rooms-intro {
+  padding: 4.5rem 1.5rem 3rem;
+  background-color: var(--secondary-white);
+  border-bottom: 1px solid rgba(44, 69, 99, 0.08);
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-label i {
+  font-size: 1rem;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-dark);
+  line-height: var(--line-height-tight);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+  max-width: 700px;
+}
+
+.section-description {
+  font-size: 1.05rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 4rem 1.5rem 2rem;
+}
+
+@media (min-width: 992px) {
+  .rooms-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.room-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  min-height: 100%;
+}
+
+.room-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px);
+}
+
+/* Room Image */
+.room-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.room-image-photo {
+  width: 100%;
+  height: 320px; /* larger image for image-led presentation */
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.room-image-wrapper:hover .room-image-photo {
+  transform: scale(1.03);
+}
+
+.room-info {
+  padding: 2.5rem 2.25rem 2.75rem; /* more breathing space */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.room-icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.room-icon i {
+  font-size: 72px;
+  color: var(--primary-gold);
+  display: block;
+}
+
+@media (max-width: 575px) {
+  .room-icon i { font-size: 56px; }
+}
+
+.room-name {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.room-description {
+  font-size: 0.95rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.room-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.room-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.room-features i {
+  color: var(--primary-gold);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.btn-view-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background-color: transparent;
+  color: var(--primary-gold);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.95rem;
+  border: 2px solid var(--primary-gold);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  align-self: flex-start;
+}
+
+.btn-view-details:hover {
+  background-color: var(--primary-gold);
+  color: var(--text-dark);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+.btn-view-details i {
+  font-size: 0.85rem;
+  transition: transform var(--transition-base);
+}
+
+.btn-view-details:hover i {
+  transform: translateX(3px);
+}
+
+.rooms-cta {
+  padding: 3rem 1.5rem;
+  background-color: var(--secondary-white);
+  border-top: 1px solid var(--secondary-light-gray);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.btn-contact-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  background-color: var(--primary-gold);
+  color: var(--text-dark);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  border: none;
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.2);
+}
+
+.btn-contact-cta:hover {
+  background-color: var(--accent-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(243, 156, 18, 0.3);
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.btn-contact-cta i {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 991px) {
+  .rooms-intro {
+    padding: 3rem 1.5rem 2.5rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .rooms-grid {
+    padding: 3rem 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .room-card {
+    border-radius: var(--radius-md);
+  }
+
+  .room-info {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-section {
+    padding: 0;
+  }
+
+  .rooms-intro {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .room-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .room-info {
+    padding: 1.5rem;
+  }
+
+  .room-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .room-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .room-features {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .room-features li {
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .btn-view-details {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .rooms-cta {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-contact-cta {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .rooms-intro {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .rooms-grid {
+    padding: 2rem 1rem;
+    gap: 1.25rem;
+  }
+
+  .room-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .room-image-content i {
+    font-size: 3rem;
+  }
+
+  .room-info {
+    padding: 1.25rem;
+  }
+
+  .room-name {
+    font-size: 1.125rem;
+  }
+
+  .room-description {
+    font-size: 0.85rem;
+    line-height: var(--line-height-normal);
+    margin-bottom: 0.875rem;
+  }
+
+  .room-features {
+    gap: 0.4rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .room-features li {
+    font-size: 0.8rem;
+  }
+
+  .btn-view-details {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .rooms-cta {
+    padding: 2rem 1rem;
+  }
+
+  .cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn-contact-cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media print {
+  .btn-view-details,
+  .btn-contact-cta {
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    background: transparent;
+  }
+
+  .room-card:hover {
+    transform: none;
+  }
+}

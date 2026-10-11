@@ -1,0 +1,306 @@
+/* ============================================
+   HERO SECTION STYLES - BUNA BURJI HOTEL
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--secondary-white);
+}
+
+/* Hero Background - User-supplied hero image with premium overlay */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(28, 47, 73, 0.72), rgba(28, 47, 73, 0.5)),
+    linear-gradient(135deg, rgba(243, 156, 18, 0.16), transparent 40%),
+    url('/hero.png') top center / cover no-repeat;
+  background-blend-mode: overlay, screen, normal;
+}
+
+/* Decorative shapes to enhance visual interest */
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(243, 156, 18, 0.15), transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.hero-background::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 70%);
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+/* Hero content container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+}
+
+.hero-text-wrapper {
+  animation: fadeInUp 0.8s ease-out;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2.25rem;
+  background: linear-gradient(180deg, rgba(12,24,42,0.56), rgba(12,24,42,0.36));
+  border-radius: var(--radius-xl);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Hero Typography */
+.hero-title {
+  font-size: clamp(2.75rem, 7vw, 4.2rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--secondary-white);
+  text-shadow: 2px 6px 18px rgba(0, 0, 0, 0.45);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-logo {
+  display: block;
+  width: min(50%, 140px);
+  height: auto;
+  margin: 0 auto 1.25rem;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+}
+
+.hero-location {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--primary-gold);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--secondary-white);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+  line-height: var(--line-height-normal);
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Actions - Buttons */
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-actions .btn-primary {
+  background-color: var(--primary-gold);
+  color: var(--text-dark);
+}
+
+.hero-actions .btn-primary:hover {
+  background-color: var(--accent-gold-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4);
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.hero-actions .btn-secondary {
+  background-color: transparent;
+  color: var(--secondary-white);
+  border: 2px solid var(--secondary-white);
+}
+
+.hero-actions .btn-secondary:hover {
+  background-color: var(--secondary-white);
+  color: var(--primary-navy);
+  border-color: var(--secondary-white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.hero-actions .bi {
+  font-size: 1.1rem;
+}
+
+/* Decorative accent element */
+.hero-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(245, 243, 240, 0), rgba(245, 243, 240, 1));
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Animation for content entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE HERO
+   ============================================ */
+
+@media (max-width: 991px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-actions {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 450px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero-content {
+    padding: 2.5rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-location {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    gap: 0.5rem;
+  }
+
+  .hero-actions .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-background::before {
+    width: 400px;
+    height: 400px;
+    top: -30%;
+    right: -20%;
+  }
+
+  .hero-background::after {
+    width: 300px;
+    height: 300px;
+    bottom: -10%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .hero-actions {
+    display: none;
+  }
+}

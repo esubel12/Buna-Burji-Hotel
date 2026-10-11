@@ -1,0 +1,353 @@
+/* ========================================
+   SERVICES PAGE STYLING
+   Buna Burji Hotel - Detailed Services Page
+   ======================================== */
+
+.services-page {
+  background-color: var(--color-white);
+  min-height: 100vh;
+}
+
+/* Page Header */
+.services-page-header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, rgba(44, 69, 99, 0.9) 100%);
+  color: var(--color-white);
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  text-align: center;
+  border-bottom: 3px solid var(--color-gold);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.services-page-header h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-white);
+}
+
+.services-page-header p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Services Content Section */
+.services-content {
+  padding: var(--spacing-3xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+}
+
+/* Service Detail Item */
+.service-detail {
+  padding: var(--spacing-2xl);
+  background-color: var(--color-white);
+  border-left: 4px solid var(--color-gold);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 2px 8px rgba(44, 69, 99, 0.05);
+  transition: all var(--transition-base);
+}
+
+.service-detail:hover {
+  box-shadow: 0 4px 16px rgba(44, 69, 99, 0.1);
+  transform: translateX(4px);
+}
+
+.service-detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-detail-header i {
+  font-size: 2.5rem;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.service-detail-header h2 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--color-navy);
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+.service-detail > p {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.service-detail ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.service-detail ul li::before {
+  content: '✓';
+  color: var(--color-gold);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: -2px;
+}
+
+/* Contact Section */
+.services-contact-section {
+  background: linear-gradient(135deg, rgba(44, 69, 99, 0.04) 0%, rgba(243, 156, 18, 0.04) 100%);
+  border-top: 1px solid rgba(44, 69, 99, 0.1);
+  border-bottom: 1px solid rgba(44, 69, 99, 0.1);
+  padding: var(--spacing-3xl) 0;
+  margin-top: var(--spacing-3xl);
+}
+
+.contact-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-content h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.contact-content p {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+}
+
+/* Contact Button */
+.btn-service-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0.75rem 2rem;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  border: 2px solid var(--color-gold);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-service-contact:hover {
+  background-color: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(44, 69, 99, 0.2);
+}
+
+.btn-service-contact i {
+  font-size: 1em;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .services-page-header {
+    padding: clamp(2rem, 6vw, 3.5rem) 0;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .services-content {
+    padding: var(--spacing-2xl) 0;
+    gap: var(--spacing-2xl);
+  }
+
+  .service-detail {
+    padding: var(--spacing-lg);
+  }
+
+  .service-detail-header {
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .service-detail-header i {
+    font-size: 2rem;
+  }
+
+  .service-detail-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .service-detail ul {
+    grid-template-columns: 1fr;
+  }
+
+  .services-contact-section {
+    padding: var(--spacing-2xl) 0;
+    margin-top: var(--spacing-2xl);
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+  .services-page-header {
+    padding: 2rem 1rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .services-page-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .services-page-header p {
+    font-size: 1rem;
+  }
+
+  .services-content {
+    padding: var(--spacing-lg) 0;
+    gap: var(--spacing-lg);
+  }
+
+  .service-detail {
+    padding: var(--spacing-md);
+    margin: 0 auto;
+  }
+
+  .service-detail-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .service-detail-header i {
+    font-size: 1.75rem;
+  }
+
+  .service-detail-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-detail > p {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .service-detail ul {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .service-detail ul li {
+    font-size: 0.9rem;
+  }
+
+  .contact-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn-service-contact {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .services-contact-section {
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-lg);
+  }
+}
+
+/* Small Mobile (< 576px) */
+@media (max-width: 575px) {
+  .services-page-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .services-page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .services-page-header p {
+    font-size: 0.9rem;
+  }
+
+  .service-detail-header i {
+    font-size: 1.5rem;
+  }
+
+  .service-detail-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .service-detail > p {
+    font-size: 0.9rem;
+  }
+
+  .service-detail ul li {
+    font-size: 0.85rem;
+  }
+
+  .contact-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-service-contact {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .services-page-header {
+    color: var(--color-navy);
+    background: none;
+    border-bottom: 2px solid var(--color-navy);
+  }
+
+  .services-page-header h1,
+  .services-page-header p {
+    color: var(--color-navy);
+  }
+
+  .service-detail {
+    page-break-inside: avoid;
+    border-left: 3px solid var(--color-navy);
+    box-shadow: none;
+  }
+
+  .btn-service-contact {
+    border: 1px solid var(--color-navy);
+    color: var(--color-navy);
+    background: none;
+  }
+}
