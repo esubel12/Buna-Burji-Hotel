@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getRooms, DEFAULT_ROOMS } from '../services/roomService'
-import { heroImage, getAssetUrl } from '../assets'
+import { heroImage, standardBedFallback, getAssetUrl } from '../assets'
+import SafeImage from '../components/SafeImage'
 import '../styles/rooms.css'
 
 export default function Rooms() {
@@ -35,7 +36,7 @@ export default function Rooms() {
           </div>
 
           <div className="rooms-hero-image-wrapper">
-            <img
+            <SafeImage
               src={heroImage}
               alt="Buna Burji Hotel guest room and hospitality atmosphere"
               className="rooms-hero-image"
@@ -49,8 +50,9 @@ export default function Rooms() {
           {rooms.map((room) => (
             <article key={room.id} className="room-card">
               <div className="room-card-image-wrapper">
-                <img
+                <SafeImage
                   src={getAssetUrl(room.image_url)}
+                  fallback={standardBedFallback}
                   alt={room.imageAlt || `Buna Burji Hotel ${room.name}`}
                   className="room-card-image"
                 />

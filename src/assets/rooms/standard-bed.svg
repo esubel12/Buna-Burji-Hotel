@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#1e2c3d"/><stop offset="1" stop-color="#344a64"/></linearGradient>
+    <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#695342"/><stop offset="1" stop-color="#4a392b"/></linearGradient>
+    <linearGradient id="duvet" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#d6dde5"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="800" height="380" fill="url(#wall)"/>
+  <rect x="230" y="40" width="340" height="230" rx="4" fill="none" stroke="#f39c12" opacity=".3"/>
+  <rect x="330" y="80" width="140" height="85" fill="#1b2533"/>
+  <circle cx="400" cy="115" r="22" fill="#d99525"/>
+  <path d="M360 145l30-25 30 15 25-25 15 35z" fill="#26384f"/>
+  <rect y="380" width="800" height="120" fill="url(#floor)"/>
+  <ellipse cx="400" cy="425" rx="260" ry="48" fill="#202936" opacity=".75"/>
+  <rect x="135" y="280" width="55" height="100" rx="3" fill="#302319"/>
+  <rect x="610" y="280" width="55" height="100" rx="3" fill="#302319"/>
+  <path d="M160 240h5v40m-17-40h29l-6-30h-17zM635 240h5v40m-17-40h29l-6-30h-17z" fill="#e8d8b3"/>
+  <rect x="220" y="160" width="360" height="160" rx="10" fill="#38291e" stroke="#4a3627" stroke-width="4"/>
+  <path d="M310 165v150m90-150v150m90-150v150" stroke="#1a120b" stroke-width="2" opacity=".6"/>
+  <rect x="245" y="220" width="140" height="55" rx="8" fill="#e2e6eb"/>
+  <rect x="415" y="220" width="140" height="55" rx="8" fill="#e2e6eb"/>
+  <rect x="255" y="235" width="130" height="50" rx="8" fill="#fff"/>
+  <rect x="415" y="235" width="130" height="50" rx="8" fill="#fff"/>
+  <rect x="290" y="245" width="60" height="45" rx="5" fill="#f39c12"/>
+  <rect x="450" y="245" width="60" height="45" rx="5" fill="#1c2f49" stroke="#f39c12"/>
+  <rect x="210" y="295" width="380" height="110" rx="8" fill="#1a120b"/>
+  <path d="M215 285q185-5 370 0l10 115q-195 15-390 0z" fill="url(#duvet)" filter="url(#shadow)"/>
+  <path d="M220 285q180 7 360 0l-5 20q-175 7-350 0z" fill="#f7f9fa"/>
+  <path d="M210 365q190 10 380 0l3 27q-196 13-386 0z" fill="#1c2f49"/>
+  <path d="M210 368q190 10 380 0v4q-190 10-380 0z" fill="#f39c12"/>
+</svg>
