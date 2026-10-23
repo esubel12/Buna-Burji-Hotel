@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Buna-Burji-Hotel/',
+  base: process.env.VERCEL ? '/' : '/Buna-Burji-Hotel/',
   envPrefix: ['VITE_', 'NEXT_PUBLIC_']
 })
